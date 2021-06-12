@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+
+    <div>
+        <form method="post">{% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Accept">
+        </form>
+    </div>
+
+{% endblock %}
+</body>
+</html>
